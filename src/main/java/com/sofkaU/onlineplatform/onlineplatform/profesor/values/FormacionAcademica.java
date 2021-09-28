@@ -36,7 +36,6 @@ public class FormacionAcademica implements ValueObject<FormacionAcademica.Props>
         };
     }
 
-
     public interface Props{
         String tituloUniversitario();
         List<String> certificadosAcademicos();
