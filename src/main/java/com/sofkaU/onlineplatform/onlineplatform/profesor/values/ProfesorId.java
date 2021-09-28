@@ -1,0 +1,6 @@
+package com.sofkaU.onlineplatform.onlineplatform.profesor.values;
+
+import co.com.sofka.domain.generic.Identity;
+
+public class ProfesorId extends Identity {
+}
