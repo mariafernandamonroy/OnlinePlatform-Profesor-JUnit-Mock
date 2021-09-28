@@ -6,6 +6,7 @@ import com.sofkaU.onlineplatform.onlineplatform.estudiante.values.EstudianteId;
 import com.sofkaU.onlineplatform.onlineplatform.generico.events.CuestionarioEvaluacionEditado;
 import com.sofkaU.onlineplatform.onlineplatform.generico.events.EvaluacionAgregada;
 import com.sofkaU.onlineplatform.onlineplatform.generico.events.ProfesorCreado;
+import com.sofkaU.onlineplatform.onlineplatform.generico.events.ProyectoEvaluacionEditado;
 import com.sofkaU.onlineplatform.onlineplatform.generico.globalvalues.CorreoElectronico;
 import com.sofkaU.onlineplatform.onlineplatform.generico.globalvalues.NombreCompleto;
 import com.sofkaU.onlineplatform.onlineplatform.profesor.values.*;
