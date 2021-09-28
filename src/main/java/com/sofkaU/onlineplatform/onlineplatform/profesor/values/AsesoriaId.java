@@ -1,4 +1,13 @@
 package com.sofkaU.onlineplatform.onlineplatform.profesor.values;
 
-public class AsesoriaId {
+import co.com.sofka.domain.generic.Identity;
+
+public class AsesoriaId extends Identity {
+    private AsesoriaId(String id){
+        super(id);
+    }
+
+    public static AsesoriaId of(String id){
+        return new AsesoriaId(id);
+    }
 }
