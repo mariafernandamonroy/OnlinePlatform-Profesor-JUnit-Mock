@@ -7,10 +7,9 @@ import com.sofkaU.onlineplatform.onlineplatform.estudiante.events.EstudianteAgre
 import com.sofkaU.onlineplatform.onlineplatform.estudiante.values.EstudianteId;
 import com.sofkaU.onlineplatform.onlineplatform.generico.globalvalues.CorreoElectronico;
 import com.sofkaU.onlineplatform.onlineplatform.generico.globalvalues.NombreCompleto;
-import com.sofkaU.onlineplatform.onlineplatform.estudiante.Estudiante;
-import com.sofkaU.onlineplatform.onlineplatform.estudiante.EstudianteChange;
-import com.sofkaU.onlineplatform.onlineplatform.estudiante.events.EstudianteCreado;
-import com.sofkaU.onlineplatform.onlineplatform.estudiante.values.EstudianteId;
+import com.sofkaU.onlineplatform.onlineplatform.profesor.events.CorreoElectronicoActualizado;
+import com.sofkaU.onlineplatform.onlineplatform.profesor.events.CursoAProfesorAsignado;
+import com.sofkaU.onlineplatform.onlineplatform.profesor.events.NombreCompletoActualizado;
 
 import java.util.List;
 
@@ -37,5 +36,24 @@ public class Estudiante extends AggregateEvent<EstudianteId> {
         events.forEach(estudiante::applyEvent);
         return estudiante;
     }
+
+    public void actualizarNombrecompleto(NombreCompleto nombreCompleto){
+        appendChange(new NombreCompletoActualizado(nombreCompleto)).apply();
+    }
+
+    public void actualizarCorreoElectronico(CorreoElectronico correoElectronico){
+        appendChange(new CorreoElectronicoActualizado(correoElectronico)).apply();
+    }
+
+    public void actualizarTotalPuntos(int totalPuntos){
+        appendChange(new TotalPuntosActualizado(totalPuntos)).apply();
+    }
+
+    public void asignarCursoAEstudiante(CursoId cursoId){
+        appendChange(new CursoAEstudianteAsignado(cursoId)).apply();
+    }
+
+    public void añadirAporte(Aporte aporte)
+
 
 }
