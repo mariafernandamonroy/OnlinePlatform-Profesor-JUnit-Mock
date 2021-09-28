@@ -90,7 +90,7 @@ public class Profesor extends AggregateEvent<ProfesorId> {
     }
 
     public void asignarTemaAsesoria(AsesoriaId asesoriaId, String tema){
-        appendChange(new FechaTemaAsignada(asesoriaId,tema)).apply();
+        appendChange(new TemaAsesoriaAsignado(asesoriaId,tema)).apply();
     }
 
     public NombreCompleto nombreCompleto() {
