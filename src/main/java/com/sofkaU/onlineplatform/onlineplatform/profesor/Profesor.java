@@ -3,6 +3,7 @@ package com.sofkaU.onlineplatform.onlineplatform.profesor;
 import co.com.sofka.domain.generic.AggregateEvent;
 import com.sofkaU.onlineplatform.onlineplatform.curso.values.CursoId;
 import com.sofkaU.onlineplatform.onlineplatform.estudiante.values.EstudianteId;
+import com.sofkaU.onlineplatform.onlineplatform.generico.eventchange.ProfesorChange;
 import com.sofkaU.onlineplatform.onlineplatform.generico.events.*;
 import com.sofkaU.onlineplatform.onlineplatform.generico.globalvalues.CorreoElectronico;
 import com.sofkaU.onlineplatform.onlineplatform.generico.globalvalues.NombreCompleto;
@@ -29,6 +30,11 @@ public class Profesor extends AggregateEvent<ProfesorId> {
         appendChange(new ProfesorCreado(nombreCompleto)).apply();
     }
 
+    private Profesor(ProfesorId profesorId){
+        super(profesorId);
+        subscribe(new ProfesorChange(this));
+    }
+
     public void actualizarNombrecompleto(NombreCompleto nombreCompleto){
         appendChange(new NombreCompletoActualizado(nombreCompleto)).apply();
     }
@@ -41,12 +47,12 @@ public class Profesor extends AggregateEvent<ProfesorId> {
         appendChange(new FormacionAcademicaActualizada(formacionAcademica)).apply();
     }
 
-    public void asignarCursoAPrfesor(){
-
+    public void asignarCursoAProfesor(CursoId cursoId){
+        appendChange(new CursoAProfesorAsignado(cursoId)).apply();
     }
 
-    public void respoderPreguntaAEstudiante(){
-
+    public void respoderPreguntaAEstudiante(EstudianteId estudianteId){
+        appendChange(new PreguntaAEstudianteRespondida(estudianteId)).apply();
     }
 
     public void agregarEvaluacion(EvaluacionId evaluacionId, Cuestionario cuestionario, Proyecto proyecto, Calificacion calificacion){
