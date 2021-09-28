@@ -3,7 +3,6 @@ package com.sofkaU.onlineplatform.onlineplatform.profesor;
 import co.com.sofka.domain.generic.AggregateEvent;
 import com.sofkaU.onlineplatform.onlineplatform.curso.values.CursoId;
 import com.sofkaU.onlineplatform.onlineplatform.estudiante.values.EstudianteId;
-import com.sofkaU.onlineplatform.onlineplatform.generico.eventchange.ProfesorChange;
 import com.sofkaU.onlineplatform.onlineplatform.generico.events.*;
 import com.sofkaU.onlineplatform.onlineplatform.generico.globalvalues.CorreoElectronico;
 import com.sofkaU.onlineplatform.onlineplatform.generico.globalvalues.NombreCompleto;
@@ -13,7 +12,6 @@ import java.sql.Time;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 
 public class Profesor extends AggregateEvent<ProfesorId> {
 
@@ -63,8 +61,8 @@ public class Profesor extends AggregateEvent<ProfesorId> {
         appendChange(new EvaluacionAgregada(evaluacionId,cuestionario,proyecto,calificacion)).apply();
     }
 
-    public void editarCuestionarioEvaluacion(EvaluacionId evaluacionId, Cuestionario cuestionario){
-        appendChange(new CuestionarioEvaluacionEditado(evaluacionId,cuestionario)).apply();
+    public void editarCuestionarioEvaluacion(Cuestionario cuestionario){
+        appendChange(new CuestionarioEvaluacionEditado(cuestionario)).apply();
     }
 
     public void editarProyectoEvaluacion(EvaluacionId evaluacionId, Cuestionario cuestionario){

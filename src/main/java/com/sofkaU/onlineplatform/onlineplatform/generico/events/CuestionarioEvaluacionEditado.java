@@ -8,15 +8,11 @@ public class CuestionarioEvaluacionEditado extends DomainEvent {
     private EvaluacionId evaluacionId;
     private Cuestionario cuestionario;
 
-    public CuestionarioEvaluacionEditado(EvaluacionId evaluacionId, Cuestionario cuestionario) {
+    public CuestionarioEvaluacionEditado(Cuestionario cuestionario) {
         super("sofkaU.onlineplatform.profesor.cuestionarioevaluacioneditado");
-        this.evaluacionId = evaluacionId;
         this.cuestionario = cuestionario;
     }
 
-    public EvaluacionId getEvaluacionId() {
-        return evaluacionId;
-    }
 
     public Cuestionario getCuestionario() {
         return cuestionario;
