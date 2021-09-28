@@ -3,6 +3,7 @@ package com.sofkaU.onlineplatform.onlineplatform.profesor;
 import co.com.sofka.domain.generic.AggregateEvent;
 import com.sofkaU.onlineplatform.onlineplatform.curso.values.CursoId;
 import com.sofkaU.onlineplatform.onlineplatform.estudiante.values.EstudianteId;
+import com.sofkaU.onlineplatform.onlineplatform.generico.events.CuestionarioEvaluacionEditado;
 import com.sofkaU.onlineplatform.onlineplatform.generico.events.EvaluacionAgregada;
 import com.sofkaU.onlineplatform.onlineplatform.generico.events.ProfesorCreado;
 import com.sofkaU.onlineplatform.onlineplatform.generico.globalvalues.CorreoElectronico;
