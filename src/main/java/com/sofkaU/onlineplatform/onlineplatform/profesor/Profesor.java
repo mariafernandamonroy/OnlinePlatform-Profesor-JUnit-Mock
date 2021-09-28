@@ -66,11 +66,11 @@ public class Profesor extends AggregateEvent<ProfesorId> {
     }
 
     public void calcularCalificacionCuestionarioEvaluacion(EvaluacionId evaluacionId, Cuestionario cuestionario, Calificacion calificacion){
-        appendChange(new calificacionCuestionarioEvaluacionCalculada(evaluacionId,cuestionario,calificacion)).apply();
+        appendChange(new CalificacionCuestionarioEvaluacionCalculada(evaluacionId,cuestionario,calificacion)).apply();
     }
 
     public void calcularProyectoCuestionarioEvaluacion(EvaluacionId evaluacionId, Proyecto proyecto, Calificacion calificacion){
-        appendChange(new calificacionProyectoEvaluacionCalculada(evaluacionId,proyecto,calificacion)).apply();
+        appendChange(new CalificacionProyectoEvaluacionCalculada(evaluacionId,proyecto,calificacion)).apply();
     }
 
     public void agregarAsesoria(AsesoriaId asesoriaId, Time duracion, Date fecha, String tema){

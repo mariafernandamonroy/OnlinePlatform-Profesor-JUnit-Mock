@@ -2,18 +2,18 @@ package com.sofkaU.onlineplatform.onlineplatform.generico.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import com.sofkaU.onlineplatform.onlineplatform.profesor.values.Calificacion;
+import com.sofkaU.onlineplatform.onlineplatform.profesor.values.Cuestionario;
 import com.sofkaU.onlineplatform.onlineplatform.profesor.values.EvaluacionId;
-import com.sofkaU.onlineplatform.onlineplatform.profesor.values.Proyecto;
 
-public class calificacionProyectoEvaluacionCalculada extends DomainEvent {
+public class CalificacionCuestionarioEvaluacionCalculada extends DomainEvent {
     private EvaluacionId evaluacionId;
-    private Proyecto proyecto;
+    private Cuestionario cuestionario;
     private Calificacion calificacion;
 
-    public calificacionProyectoEvaluacionCalculada(EvaluacionId evaluacionId, Proyecto proyecto, Calificacion calificacion) {
-        super("sofkaU.onlineplatform.profesor.calificacionproyectoevaluacioncalculada");
+    public CalificacionCuestionarioEvaluacionCalculada(EvaluacionId evaluacionId, Cuestionario cuestionario, Calificacion calificacion) {
+        super("sofkaU.onlineplatform.profesor.calificacioncuestionarioevaluacioncalculada");
         this.evaluacionId = evaluacionId;
-        this.proyecto = proyecto;
+        this.cuestionario = cuestionario;
         this.calificacion = calificacion;
     }
 
@@ -21,8 +21,8 @@ public class calificacionProyectoEvaluacionCalculada extends DomainEvent {
         return evaluacionId;
     }
 
-    public Proyecto getProyecto() {
-        return proyecto;
+    public Cuestionario getCuestionario() {
+        return cuestionario;
     }
 
     public Calificacion getCalificacion() {
