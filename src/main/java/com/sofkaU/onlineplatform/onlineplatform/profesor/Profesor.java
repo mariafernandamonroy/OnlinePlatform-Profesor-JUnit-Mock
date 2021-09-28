@@ -4,7 +4,7 @@ import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 import com.sofkaU.onlineplatform.onlineplatform.curso.values.CursoId;
 import com.sofkaU.onlineplatform.onlineplatform.estudiante.values.EstudianteId;
-import com.sofkaU.onlineplatform.onlineplatform.generico.events.*;
+import com.sofkaU.onlineplatform.onlineplatform.profesor.events.*;
 import com.sofkaU.onlineplatform.onlineplatform.generico.globalvalues.CorreoElectronico;
 import com.sofkaU.onlineplatform.onlineplatform.generico.globalvalues.NombreCompleto;
 import com.sofkaU.onlineplatform.onlineplatform.profesor.values.*;

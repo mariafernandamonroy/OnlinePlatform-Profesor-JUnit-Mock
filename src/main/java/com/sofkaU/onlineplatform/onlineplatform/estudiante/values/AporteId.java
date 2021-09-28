@@ -1,4 +1,6 @@
 package com.sofkaU.onlineplatform.onlineplatform.estudiante.values;
 
-public class AporteId {
+import co.com.sofka.domain.generic.Identity;
+
+public class AporteId implements Identity {
 }

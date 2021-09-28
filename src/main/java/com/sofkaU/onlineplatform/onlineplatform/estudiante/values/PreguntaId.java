@@ -1,4 +1,6 @@
 package com.sofkaU.onlineplatform.onlineplatform.estudiante.values;
 
-public class PreguntaId {
+import co.com.sofka.domain.generic.Identity;
+
+public class PreguntaId implements Identity {
 }

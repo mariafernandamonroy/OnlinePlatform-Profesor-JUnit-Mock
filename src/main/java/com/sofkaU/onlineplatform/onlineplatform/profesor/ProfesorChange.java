@@ -3,8 +3,7 @@ package com.sofkaU.onlineplatform.onlineplatform.profesor;
 import co.com.sofka.domain.generic.EventChange;
 import com.sofkaU.onlineplatform.onlineplatform.curso.values.CursoId;
 import com.sofkaU.onlineplatform.onlineplatform.estudiante.values.EstudianteId;
-import com.sofkaU.onlineplatform.onlineplatform.generico.events.*;
-import com.sofkaU.onlineplatform.onlineplatform.profesor.Profesor;
+import com.sofkaU.onlineplatform.onlineplatform.profesor.events.*;
 
 import java.util.ArrayList;
 import java.util.List;

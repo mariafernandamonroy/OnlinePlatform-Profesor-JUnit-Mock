@@ -1,9 +1,8 @@
-package com.sofkaU.onlineplatform.onlineplatform.generico.events;
+package com.sofkaU.onlineplatform.onlineplatform.profesor.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import com.sofkaU.onlineplatform.onlineplatform.profesor.values.Calificacion;
 import com.sofkaU.onlineplatform.onlineplatform.profesor.values.Cuestionario;
-import com.sofkaU.onlineplatform.onlineplatform.profesor.values.EvaluacionId;
 
 public class CalificacionCuestionarioEvaluacionCalculada extends DomainEvent {
     private Cuestionario cuestionario;

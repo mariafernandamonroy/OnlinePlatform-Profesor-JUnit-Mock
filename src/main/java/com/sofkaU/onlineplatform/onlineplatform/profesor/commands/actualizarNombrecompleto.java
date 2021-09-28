@@ -1,4 +1,4 @@
-package com.sofkaU.onlineplatform.onlineplatform.generico.commands;
+package com.sofkaU.onlineplatform.onlineplatform.profesor.commands;
 
 import co.com.sofka.domain.generic.Command;
 import com.sofkaU.onlineplatform.onlineplatform.generico.globalvalues.NombreCompleto;
