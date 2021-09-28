@@ -1,9 +1,10 @@
 package com.sofkaU.onlineplatform.onlineplatform.generico.commands;
 
+import co.com.sofka.domain.generic.Command;
 import com.sofkaU.onlineplatform.onlineplatform.curso.values.CursoId;
 import com.sofkaU.onlineplatform.onlineplatform.profesor.values.ProfesorId;
 
-public class asignarCursoAProfesor {
+public class asignarCursoAProfesor extends Command {
     private final ProfesorId profesorId;
     private final CursoId cursoId;
 

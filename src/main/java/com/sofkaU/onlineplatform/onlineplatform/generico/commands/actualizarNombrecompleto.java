@@ -2,7 +2,6 @@ package com.sofkaU.onlineplatform.onlineplatform.generico.commands;
 
 import co.com.sofka.domain.generic.Command;
 import com.sofkaU.onlineplatform.onlineplatform.generico.globalvalues.NombreCompleto;
-import com.sofkaU.onlineplatform.onlineplatform.profesor.Profesor;
 import com.sofkaU.onlineplatform.onlineplatform.profesor.values.ProfesorId;
 
 public class actualizarNombrecompleto extends Command {
