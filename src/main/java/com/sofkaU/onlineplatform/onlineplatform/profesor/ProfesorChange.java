@@ -53,5 +53,37 @@ public class ProfesorChange extends EventChange {
             profesor.editarCuestionarioEvaluacion(event.getCuestionario());
         });
 
+        apply((ProyectoEvaluacionEditado event) -> {
+            profesor.editarProyectoEvaluacion(event.getCuestionario());
+        });
+
+        apply((CalificacionCuestionarioEvaluacionCalculada event) -> {
+            profesor.calcularCalificacionCuestionarioEvaluacion(event.getCuestionario(), event.getCalificacion());
+        });
+
+        apply((CalificacionProyectoEvaluacionCalculada event) -> {
+            profesor.calcularProyectoCuestionarioEvaluacion(event.getProyecto(), event.getCalificacion());
+        });
+
+        apply((AsesoriaAgregada event) -> {
+            profesor.asesoria = new Asesoria(
+                    event.getAsesoriaId(),
+                    event.getDuracion(),
+                    event.getFecha(),
+                    event.getTema()
+            );
+        });
+
+        apply((DuracionAsesoriaAsignada event) -> {
+            profesor.asignarDuracionAsesoria(event.getDuracion());
+        });
+
+        apply((FechaAsesoriaAsignada event) -> {
+            profesor.asignarFechaAsesoria(event.getFecha());
+        });
+
+        apply((TemaAsesoriaAsignado event) -> {
+            profesor.asignarTemaAsesoria(event.getTema());
+        });
     }
 }

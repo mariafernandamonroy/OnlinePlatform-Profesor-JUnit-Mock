@@ -65,16 +65,16 @@ public class Profesor extends AggregateEvent<ProfesorId> {
         appendChange(new CuestionarioEvaluacionEditado(cuestionario)).apply();
     }
 
-    public void editarProyectoEvaluacion(EvaluacionId evaluacionId, Cuestionario cuestionario){
-        appendChange(new ProyectoEvaluacionEditado(evaluacionId,cuestionario)).apply();
+    public void editarProyectoEvaluacion(Cuestionario cuestionario){
+        appendChange(new ProyectoEvaluacionEditado(cuestionario)).apply();
     }
 
-    public void calcularCalificacionCuestionarioEvaluacion(EvaluacionId evaluacionId, Cuestionario cuestionario, Calificacion calificacion){
-        appendChange(new CalificacionCuestionarioEvaluacionCalculada(evaluacionId,cuestionario,calificacion)).apply();
+    public void calcularCalificacionCuestionarioEvaluacion(Cuestionario cuestionario, Calificacion calificacion){
+        appendChange(new CalificacionCuestionarioEvaluacionCalculada(cuestionario,calificacion)).apply();
     }
 
-    public void calcularProyectoCuestionarioEvaluacion(EvaluacionId evaluacionId, Proyecto proyecto, Calificacion calificacion){
-        appendChange(new CalificacionProyectoEvaluacionCalculada(evaluacionId,proyecto,calificacion)).apply();
+    public void calcularProyectoCuestionarioEvaluacion(Proyecto proyecto, Calificacion calificacion){
+        appendChange(new CalificacionProyectoEvaluacionCalculada(proyecto,calificacion)).apply();
     }
 
     public void agregarAsesoria(AsesoriaId asesoriaId, Time duracion, Date fecha, String tema){
@@ -85,16 +85,16 @@ public class Profesor extends AggregateEvent<ProfesorId> {
         appendChange(new AsesoriaAgregada(asesoriaId,duracion,fecha,tema)).apply();
     }
 
-    public void asignarDuracionAsesoria(AsesoriaId asesoriaId, Time duracion){
-        appendChange(new DuracionAsesoriaAsignada(asesoriaId,duracion)).apply();
+    public void asignarDuracionAsesoria(Time duracion){
+        appendChange(new DuracionAsesoriaAsignada(duracion)).apply();
     }
 
-    public void asignarFechaAsesoria(AsesoriaId asesoriaId, Date fecha){
-        appendChange(new FechaAsesoriaAsignada(asesoriaId,fecha)).apply();
+    public void asignarFechaAsesoria(Date fecha){
+        appendChange(new FechaAsesoriaAsignada(fecha)).apply();
     }
 
-    public void asignarTemaAsesoria(AsesoriaId asesoriaId, String tema){
-        appendChange(new TemaAsesoriaAsignado(asesoriaId,tema)).apply();
+    public void asignarTemaAsesoria(String tema){
+        appendChange(new TemaAsesoriaAsignado(tema)).apply();
     }
 
     public NombreCompleto nombreCompleto() {

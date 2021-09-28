@@ -5,17 +5,11 @@ import com.sofkaU.onlineplatform.onlineplatform.profesor.values.Cuestionario;
 import com.sofkaU.onlineplatform.onlineplatform.profesor.values.EvaluacionId;
 
 public class ProyectoEvaluacionEditado extends DomainEvent {
-    private EvaluacionId evaluacionId;
     private Cuestionario cuestionario;
 
-    public ProyectoEvaluacionEditado(EvaluacionId evaluacionId, Cuestionario cuestionario) {
+    public ProyectoEvaluacionEditado(Cuestionario cuestionario) {
         super("sofkaU.onlineplatform.profesor.proyectoevaluacioneditado");
-        this.evaluacionId = evaluacionId;
         this.cuestionario = cuestionario;
-    }
-
-    public EvaluacionId getEvaluacionId() {
-        return evaluacionId;
     }
 
     public Cuestionario getCuestionario() {

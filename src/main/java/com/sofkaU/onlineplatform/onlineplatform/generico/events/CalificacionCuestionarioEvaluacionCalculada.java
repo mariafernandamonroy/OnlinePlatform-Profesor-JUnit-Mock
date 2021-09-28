@@ -6,19 +6,13 @@ import com.sofkaU.onlineplatform.onlineplatform.profesor.values.Cuestionario;
 import com.sofkaU.onlineplatform.onlineplatform.profesor.values.EvaluacionId;
 
 public class CalificacionCuestionarioEvaluacionCalculada extends DomainEvent {
-    private EvaluacionId evaluacionId;
     private Cuestionario cuestionario;
     private Calificacion calificacion;
 
-    public CalificacionCuestionarioEvaluacionCalculada(EvaluacionId evaluacionId, Cuestionario cuestionario, Calificacion calificacion) {
+    public CalificacionCuestionarioEvaluacionCalculada(Cuestionario cuestionario, Calificacion calificacion) {
         super("sofkaU.onlineplatform.profesor.calificacioncuestionarioevaluacioncalculada");
-        this.evaluacionId = evaluacionId;
         this.cuestionario = cuestionario;
         this.calificacion = calificacion;
-    }
-
-    public EvaluacionId getEvaluacionId() {
-        return evaluacionId;
     }
 
     public Cuestionario getCuestionario() {
