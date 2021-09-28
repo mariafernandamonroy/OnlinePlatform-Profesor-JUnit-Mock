@@ -7,11 +7,10 @@ import java.sql.Time;
 import java.util.Date;
 
 public class AsesoriaAgregada extends DomainEvent {
-    private AsesoriaId asesoriaId;
-    private Time duracion;
-    private Date fecha;
-    private String tema;
-    private Time duration;
+    private final AsesoriaId asesoriaId;
+    private final Time duracion;
+    private final Date fecha;
+    private final String tema;
 
     public AsesoriaAgregada(AsesoriaId asesoriaId, Time duracion, Date fecha, String tema) {
         super("sofkaU.onlineplatform.profesor.asesoriaagregada");
@@ -35,9 +34,5 @@ public class AsesoriaAgregada extends DomainEvent {
 
     public String getTema() {
         return tema;
-    }
-
-    public Time getDuration() {
-        return duration;
     }
 }
