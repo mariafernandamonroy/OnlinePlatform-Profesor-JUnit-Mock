@@ -12,4 +12,12 @@ public class TemaAsesoriaAsignado extends DomainEvent {
         this.asesoriaId = asesoriaId;
         this.tema = tema;
     }
+
+    public AsesoriaId getAsesoriaId() {
+        return asesoriaId;
+    }
+
+    public String getTema() {
+        return tema;
+    }
 }
