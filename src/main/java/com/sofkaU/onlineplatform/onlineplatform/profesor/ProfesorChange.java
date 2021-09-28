@@ -54,7 +54,7 @@ public class ProfesorChange extends EventChange {
         });
 
         apply((ProyectoEvaluacionEditado event) -> {
-            profesor.editarProyectoEvaluacion(event.getCuestionario());
+            profesor.editarProyectoEvaluacion(event.getProyecto());
         });
 
         apply((CalificacionCuestionarioEvaluacionCalculada event) -> {

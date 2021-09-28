@@ -3,16 +3,17 @@ package com.sofkaU.onlineplatform.onlineplatform.generico.events;
 import co.com.sofka.domain.generic.DomainEvent;
 import com.sofkaU.onlineplatform.onlineplatform.profesor.values.Cuestionario;
 import com.sofkaU.onlineplatform.onlineplatform.profesor.values.EvaluacionId;
+import com.sofkaU.onlineplatform.onlineplatform.profesor.values.Proyecto;
 
 public class ProyectoEvaluacionEditado extends DomainEvent {
-    private Cuestionario cuestionario;
+    private Proyecto proyecto;
 
-    public ProyectoEvaluacionEditado(Cuestionario cuestionario) {
+    public ProyectoEvaluacionEditado(Proyecto proyecto) {
         super("sofkaU.onlineplatform.profesor.proyectoevaluacioneditado");
-        this.cuestionario = cuestionario;
+        this.proyecto = proyecto;
     }
 
-    public Cuestionario getCuestionario() {
-        return cuestionario;
+    public Proyecto getProyecto() {
+        return proyecto;
     }
 }
