@@ -9,7 +9,6 @@ import com.sofkaU.onlineplatform.onlineplatform.profesor.values.Proyecto;
 import java.util.Objects;
 
 public class Evaluacion extends Entity<EvaluacionId> {
-
     private Cuestionario cuestionario;
     private Proyecto proyecto;
     private Calificacion calificacion;
