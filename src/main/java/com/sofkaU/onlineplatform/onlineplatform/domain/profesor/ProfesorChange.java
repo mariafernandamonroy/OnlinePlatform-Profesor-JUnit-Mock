@@ -1,12 +1,8 @@
 package com.sofkaU.onlineplatform.onlineplatform.domain.profesor;
 
 import co.com.sofka.domain.generic.EventChange;
-import com.sofkaU.onlineplatform.onlineplatform.curso.values.CursoId;
-import com.sofkaU.onlineplatform.onlineplatform.estudiante.values.EstudianteId;
 import com.sofkaU.onlineplatform.onlineplatform.domain.profesor.events.*;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class ProfesorChange extends EventChange {
     public ProfesorChange(Profesor profesor) {
@@ -27,17 +23,7 @@ public class ProfesorChange extends EventChange {
             profesor.formacionAcademica = event.getFormacionAcademica();
         });
 
-        apply((CursoAProfesorAsignado event) -> {
-            List<CursoId> cursoIds = new ArrayList<>();
-            cursoIds.add(event.getCursoId());
-            profesor.cursoIds = cursoIds;
-        });
 
-        apply((PreguntaAEstudianteRespondida event) -> {
-            List<EstudianteId> estudianteIds = new ArrayList<>();
-            estudianteIds.add(event.getEstudianteId());
-            profesor.estudianteIds = estudianteIds;
-        });
 
         apply((EvaluacionAgregada event) -> {
             profesor.evaluacion = new Evaluacion(

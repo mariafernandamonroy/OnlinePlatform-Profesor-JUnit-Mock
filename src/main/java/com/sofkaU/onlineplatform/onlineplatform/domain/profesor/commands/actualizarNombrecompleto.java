@@ -18,4 +18,8 @@ public class actualizarNombrecompleto extends Command {
     public ProfesorId getProfesorId() {
         return profesorId;
     }
+
+    public NombreCompleto getNombreCompleto() {
+        return nombreCompleto;
+    }
 }
