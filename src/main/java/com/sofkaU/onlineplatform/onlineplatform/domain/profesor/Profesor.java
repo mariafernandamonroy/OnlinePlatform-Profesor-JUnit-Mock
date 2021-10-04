@@ -22,7 +22,7 @@ public class Profesor extends AggregateEvent<ProfesorId> {
 
     public Profesor(ProfesorId profesorId, NombreCompleto nombreCompleto, CorreoElectronico correoElectronico) {
         super(profesorId);
-        appendChange(new ProfesorCreado(nombreCompleto)).apply();
+        appendChange(new ProfesorCreado(nombreCompleto,correoElectronico)).apply();
     }
 
     private Profesor(ProfesorId profesorId){
